@@ -2,6 +2,53 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 64px 0;
+}
+
+.navbar .left {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.navbar .left::after {
+    position: relative;
+    top: -5px;
+    content: "3D ARTIST";
+    font-size: 12px;
+    margin-left: 20px;
+}
+
+.navbar .right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+}
+
+.navbar .right a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar .right a:hover {
+    text-decoration: underline;
+}
+
+.navbar .right img {
+    width: 24px;
+    height: 24px;
+}
+
+
 .project-grid {
     display: grid;
     grid-template-areas:
@@ -13,9 +60,7 @@ body {
         "foam foam dimensional"
         "foam foam dimensional";
     gap: 16px;
-    /* width: 100%; */
-    max-width: 90%;
-    margin: 0 auto;
+    width: 100%;
 }
 
 .project {
@@ -91,6 +136,11 @@ body {
     grid-area: dimensional;
 }
 
+.footer {
+    text-align: center;
+    padding: 64px;
+}
+
 @media only screen and (max-width: 1100px) {
     .project-grid {
         grid-template-areas:
@@ -104,6 +154,10 @@ body {
 }
 
 @media only screen and (max-width: 1100px) {
+    .container {
+        max-width: 100%;
+    }
+
     .project-grid {
         grid-template-areas:
             "eth eth"
@@ -112,7 +166,6 @@ body {
             "insta insta"
             "cup foam"
             "dimensional dimensional";
-        max-width: 100%;
     }
 }
 
@@ -127,11 +180,15 @@ body {
             "cup cup"
             "foam foam"
             "dimensional dimensional";
-        max-width: 100%;
         column-gap: 0;
     }
 
     .project .overlay {
         font-size: 24px;
+    }
+
+    .footer {
+        font-size: 14px;
+        padding: 32px;
     }
 }
