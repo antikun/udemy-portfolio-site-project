@@ -19,13 +19,13 @@ body {
     font-weight: 700;
 }
 
-.navbar .left::after {
+/* .navbar .left::after {
     position: relative;
     top: -5px;
     content: "3D ARTIST";
     font-size: 12px;
     margin-left: 20px;
-}
+} */
 
 .navbar .right {
     display: flex;
@@ -48,6 +48,19 @@ body {
     height: 24px;
 }
 
+.navbar .hamburger {
+    display: none;
+    width: 50px;
+    height: 50px;
+}
+
+.navbar .bar {
+    background-color: black;
+    height: 4px;
+    width: 36px;
+    margin: 3px;
+    border-radius: 10px;
+}
 
 .project-grid {
     display: grid;
@@ -170,6 +183,32 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        background-color: white;
+        padding: 16px 24px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    /* .navbar .left::after {
+        display: none;
+    } */
+
+    .navbar .right {
+        display: none;
+    }
+
+    .navbar .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .project-grid {
         grid-template-areas:
             "eth eth"
@@ -181,6 +220,7 @@ body {
             "foam foam"
             "dimensional dimensional";
         column-gap: 0;
+        margin-top: 100px;
     }
 
     .project .overlay {
