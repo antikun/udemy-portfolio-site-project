@@ -2,9 +2,13 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 .project {
     position: relative;
-    width: 300px;
 }
 
 .project img {
