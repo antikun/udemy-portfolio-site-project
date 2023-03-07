@@ -54,6 +54,10 @@ body {
     height: 50px;
 }
 
+.navbar .hamburger:hover {
+    cursor: pointer;
+}
+
 .hamburger .bar {
     background-color: black;
     height: 4px;
@@ -73,8 +77,9 @@ body {
     position: fixed;
     z-index: 2;
     top: 82px;
-    right: 0;
+    right: -120px;
     padding: 16px;
+    transition: transform 500ms ease-in-out;
 }
 
 .mobileNav img {
@@ -90,6 +95,10 @@ body {
 
 .mobileNav a:hover {
     text-decoration: underline;
+}
+
+.openMobileNav {
+    transform: translateX(-120px);
 }
 
 .project-grid {
@@ -264,15 +273,15 @@ body {
 }
 
 .animateBar1 {
-    animation: 1s flipBar1 forwards;
+    animation: 500ms flipBar1 forwards;
 }
 
 .animateBar2 {
-    animation: 1s fadeBar2 forwards;
+    animation: 500ms fadeBar2 forwards;
 }
 
 .animateBar3 {
-    animation: 1s flipBar3 forwards;
+    animation: 500ms flipBar3 forwards;
 }
 
 
