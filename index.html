@@ -33,7 +33,7 @@
             </nav>
             <div class="hamburger">
                 <div class="bar"></div>
-                <div class="bar"></div>
+                <div class="bar "></div>
                 <div class="bar"></div>
             </div>
 
@@ -79,6 +79,15 @@
         </main>
         <footer class="footer">Designed and built by Patrick Star in Bikini Bottom.</footer>
     </div>
+
+    <script>
+        document.querySelector(".hamburger").addEventListener("click", () => {
+            const bars = document.querySelectorAll(".bar");
+            for (let i = 0; i < bars.length; i++) {
+                bars[i].classList.toggle(`animateBar${i + 1}`)
+            }
+        })
+    </script>
 
 </body>
 
